@@ -1,0 +1,85 @@
+
+
+
+# The key idea of this program is to equate the strings
+# "rock", "paper", "scissors", "lizard", "Spock" to numbers
+# as follows:
+# 0 - rock
+# 1 - Spock
+# 2 - paper
+# 3 - lizard
+# 4 - scissors
+import random
+def name_to_number(name):
+    if name == "rock":
+        return 0
+    if name == "Spock":
+        return 1
+    if name == "paper":
+        return 2
+    if name == "lizard":
+        return 3
+    if name == "scissors":
+        return 4
+    else:
+        print "Error: Invalid Name"
+
+def number_to_name(number):
+     if number == 0:
+        return "rock"
+     if number == 1:
+        return "Spock"
+     if number == 2:
+        return "paper"
+     if number == 3:
+        return "lizard"
+     if number == 4:
+        return "scissors"
+     else:
+        print "Error: Invalid Number"    
+
+def rpsls(player_choice): 
+    print " "
+    print "Player chooses", player_choice 
+    player_number = name_to_number(player_choice)
+    computer_number = random.randrange(0,5)
+    computer_choice = number_to_name(computer_number)
+    print "Computer chooses", computer_choice
+    
+    game = (player_number - computer_number) % 5
+    
+    if  (game == 1) or (game == 2):
+        print "Player wins!"
+    
+    elif (game == 3) or (game == 4):
+        print "Computer wins!"
+        
+    elif game == 0:
+        print "Player and computer tie!"
+        
+    else:
+        print " "
+    
+    
+    # print a blank line to separate consecutive games
+
+    # print out the message for the player's choice
+
+    # convert the player's choice to player_number using the function name_to_number()
+
+    # compute random guess for comp_number using random.randrange()
+
+    # convert comp_number to comp_choice using the function number_to_name()
+    
+    # print out the message for computer's choice
+
+    # compute difference of comp_number and player_number modulo five
+
+    # use if/elif/else to determine winner, print winner message
+    
+# test your code 
+rpsls("rock")
+rpsls("Spock")
+rpsls("paper")
+rpsls("lizard")
+rpsls("scissors")
