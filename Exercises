@@ -1,32 +1,32 @@
 #miles to feet
-miles = input("Miles: ")
+miles = int(input("Miles: "))
 feet = miles * 5280
 print str(miles) + " miles equals " + str(feet) + " feet."
 
 #hours/minutes to seconds
-hours = input("Hours: ")
-minutes = input("Minutes: ")
-seconds = input("Seconds: ")
+hours = int(input("Hours: "))
+minutes = int(input("Minutes: "))
+seconds = int(input("Seconds: "))
 total_seconds = (hours * 60 + minutes) * 60 + seconds
 print str(hours) + " hours, " + str(minutes) + " minutes, and",
 print str(seconds) + " seconds totals to " + str(total_seconds) + " seconds."
 
 #rectangle perimeter
-width = input("Width: ")
-height = input("Height: ")
+width = int(input("Width: "))
+height = int(input("Height: "))
 perimeter = width * 2 + height * 2
 print "A rectangle " + str(width) + " inches wide and " + str(height),
 print "inches high has a perimeter of " + str(perimeter) + " inches."
 
 #area
-width = input("Width: ")
-height = input("Height: ")
+width =int(input("Width: "))
+height = int(input("Height: "))
 area = width * height
 print "A rectangle " + str(width) + " inches wide and " + str(height),
 print "inches high has an area of " + str(area) + " square inches."
 
 #circumference
-radius = input("Radius: ")
+radius = int(input("Radius: "))
 circumference = 2 * PI * radius
 print "A circle with a radius of " + str(radius),
 print "inches has a circumference of " + str(circumference) + " inches."
@@ -46,5 +46,15 @@ area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
 print "A triangle with vertices (" + str(x0) + "," + str(y0) + "),",
 print "(" + str(x1) + "," + str(y1) + "), and",
 print "(" + str(x2) + "," + str(y2) + ") has an area of " + str(area) + "."
+
+
+#What's your name?
+first_name = input("What's your first name?: ")
+last_name = input("What's your last name?: ")
+def name_tag(first_name, last_name):
+    return "My name is " + first_name + " " + last_name + "."
+
+print name_tag(first_name, last_name)
+
 
 
