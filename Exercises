@@ -58,3 +58,28 @@ print name_tag(first_name, last_name)
 
 
 
+#Count Operator
+def reset():
+    global count
+    count = 0
+    
+def increment():
+    global count
+    count += 1
+
+def decrement():
+    global count
+    count -= 1
+    
+def print_count():
+    print count
+    
+#examples
+increment()
+print_count()
+increment()
+print_count()
+reset()
+decrement()
+decrement()
+print_count()
