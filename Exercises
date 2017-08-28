@@ -57,7 +57,7 @@ def name_tag(first_name, last_name):
 print name_tag(first_name, last_name)
 
 
-
+#Pig latin translator
 pyg = 'ay'
 
 original = raw_input('Enter a word:')
